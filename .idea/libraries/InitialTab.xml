@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="InitialTab">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/script/_legacy/components/Page/chat/InitialTab.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
