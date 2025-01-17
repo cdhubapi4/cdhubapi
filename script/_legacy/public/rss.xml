@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>스페이스챗 커뮤니티</title>
+        <link>https://space-chat.io/community</link>
+        <description>스페이스챗의 최신 게시글</description>
+        <language>ko</language>
+        <managingEditor>spacechat.io@gmail.com</managingEditor>
+        <webMaster>spacechat.io@gmail.com</webMaster>
+        <image>
+            <url>https://space-chat.io/favicon.ico</url>
+            <title>스페이스챗</title>
+            <link>https://space-chat.io</link>
+        </image>
+        <category>채팅</category>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <ttl>60</ttl>
+    
+    
+
+  </channel>
+</rss>

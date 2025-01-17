@@ -1,0 +1,444 @@
+/* ************************************************************ */
+/*  Default CSS
+/* ************************************************************ */
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+button.button-dark {
+  border-radius: 2px;
+  border: 1px solid #2a2c38;
+  background: #20202e;
+
+  color: #d2d2d5;
+  text-align: center;
+  font-family: Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+
+  width: 100%;
+  padding: 16px 24px 14px 24px;
+}
+
+button.button-default {
+  border-radius: 4px;
+  border: 1px solid #5b6783;
+  background: #363d4e;
+
+  padding: 16px 0 14px 0;
+}
+
+.button-text {
+  color: #fdfdfd;
+  text-align: center;
+  font-family: Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 1rem;
+  /* 13px */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  /* 12px */
+}
+
+.message-title {
+  font-family: Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 0.7692307692307693rem;
+  /* 10px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* 14px */
+  letter-spacing: -0.4px;
+  color: #d2d2d5;
+}
+
+.message-content {
+  font-family: Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 0.7692307692307693rem;
+  /* 10px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* 12px */
+  color: #ddd;
+}
+
+.sub-main-text {
+  color: #cdcbcb;
+  font-family: Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 0.46153846153846156rem;
+  /* 6px */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  /* 8px */
+  letter-spacing: -0.4px;
+}
+
+.sub-text {
+  font-family: Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 0.46153846153846156rem;
+  /* 6px */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  /* 8px */
+  letter-spacing: -0.4px;
+  color: #c1c1c1;
+}
+
+/* 버튼 : 웹일때만 적용 */
+@media (min-width: 768px) {
+  button:hover:enabled {
+    opacity: 0.6 !important;
+  }
+
+  button {
+    transition: opacity 0.3s ease;
+  }
+}
+
+/* 스크롤바 CSS */
+::-webkit-scrollbar {
+  /* : 스크롤바 전체 */
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  /* : 스크롤 막대 */
+  background-color: #4a4a4a;
+  border-radius: 10px;
+  border: 3.8px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  /* : 스크롤 막대 외부 */
+  background-color: transparent;
+}
+
+/* 줄바꿈: 최대 줄수 ... 표시 */
+.ellipse-1 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.ellipse-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.ellipse-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+button {
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+:root {
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 0px) {
+  :root {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  :root {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  :root {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  :root {
+    font-size: 110%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  :root {
+    font-size: 150%;
+  }
+}
+
+body {
+  -webkit-tap-highlight-color: transparent !important;
+  background-color: #111213;
+  margin: 0;
+  color: #d2d2d5;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.container .container-inner {
+  max-width: 600px;
+  width: 100vw;
+  background-color: #18171C;
+  height: var(--vh);
+
+}
+
+/* ************************************************************ */
+/*  Font
+/* ************************************************************ */
+
+/* 
+Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif
+SpoqaHanSansNeo-Bold 700
+SpoqaHanSansNeo-Medium 500
+SpoqaHanSansNeo-Regular 400
+SpoqaHanSansNeo-Light 300
+SpoqaHanSansNeo-Thin 250
+ */
+@font-face {
+  font-family: Spoqa Han Sans Neo,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Malgun Gothic",
+    "맑은 고딕",
+    helvetica,
+    "Apple SD Gothic Neo",
+    sans-serif;
+  ;
+  font-weight: 700;
+  src:
+    url("/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2"),
+    url("/fonts/SpoqaHanSansNeo-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Spoqa Han Sans Neo,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Malgun Gothic",
+    "맑은 고딕",
+    helvetica,
+    "Apple SD Gothic Neo",
+    sans-serif;
+  ;
+  font-weight: 500;
+  src:
+    url("/fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2"),
+    url("/fonts/SpoqaHanSansNeo-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Spoqa Han Sans Neo,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Malgun Gothic",
+    "맑은 고딕",
+    helvetica,
+    "Apple SD Gothic Neo",
+    sans-serif;
+  ;
+  font-weight: 400;
+  src:
+    url("/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2"),
+    url("/fonts/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Spoqa Han Sans Neo,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Malgun Gothic",
+    "맑은 고딕",
+    helvetica,
+    "Apple SD Gothic Neo",
+    sans-serif;
+  ;
+  font-weight: 300;
+  src:
+    url("/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2"),
+    url("/fonts/SpoqaHanSansNeo-Light.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Spoqa Han Sans Neo,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Malgun Gothic",
+    "맑은 고딕",
+    helvetica,
+    "Apple SD Gothic Neo",
+    sans-serif;
+  ;
+  font-weight: 250;
+  src:
+    url("/fonts/SpoqaHanSansNeo-Thin.woff2") format("woff2"),
+    url("/fonts/SpoqaHanSansNeo-Thin.woff") format("woff");
+  font-display: swap;
+}
+
+/* 
+Noto Sans KR 
+NotoSansKR-Black 900
+NotoSansKR-Bold 700
+NotoSansKR-Medium 500
+NotoSansKR-Regular 400
+NotoSansKR-Light 300
+NotoSansKR-Thin 250
+*/
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src:
+    url("/fonts/NotoSansKR-Black-Alphabetic.woff2") format("woff2"),
+    url("/fonts/NotoSansKR-Black-Alphabetic.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src:
+    url("/fonts/NotoSansKR-Bold-Alphabetic.woff2") format("woff2"),
+    url("/fonts/NotoSansKR-Bold-Alphabetic.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src:
+    url("/fonts/NotoSansKR-Medium-Alphabetic.woff2") format("woff2"),
+    url("/fonts/NotoSansKR-Medium-Alphabetic.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src:
+    url("/fonts/NotoSansKR-Regular-Alphabetic.woff2") format("woff2"),
+    url("/fonts/NotoSansKR-Regular-Alphabetic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src:
+    url("/fonts/NotoSansKR-Light-Alphabetic.woff2") format("woff2"),
+    url("/fonts/NotoSansKR-Light-Alphabetic.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src:
+    url("/fonts/NotoSansKR-Thin-Alphabetic.woff2") format("woff2"),
+    url("/fonts/NotoSansKR-Thin-Alphabetic.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 
+KCCPakKyongni 박경리체
+*/
+@font-face {
+  font-family: "KCCPakKyongni";
+  src:
+    url("/fonts/KCCPakKyongni.woff2") format("woff2"),
+    url("/fonts/KCCPakKyongni.ttf") format("ttf");
+  font-display: block;
+}
+
+/* Scroll Animation (sa, 스크롤 애니메이션) */
+.sa {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* 아래에서 위로 페이드 인 */
+.sa-up {
+  transform: translate(0, 100px);
+}
+
+/* 위에서 아래로 페이드 인 */
+.sa-down {
+  transform: translate(0, -100px);
+}
+
+/* 왼쪽에서 오른쪽으로 페이드 인 */
+.sa-right {
+  transform: translate(-100px, 0);
+}
+
+/* 오른쪽에서 왼쪽으로 페이드 인 */
+.sa-left {
+  transform: translate(100px, 0);
+}
+
+/* 왼쪽으로 회전하면서 페이드 인 */
+.sa-rotateL {
+  transform: rotate(180deg);
+}
+
+/* 오른쪽으로 회전하면서 페이드 인 */
+.sa-rotateR {
+  transform: rotate(-180deg);
+}
+
+/* 작아진 상태에서 커지면서 페이드 인 */
+.sa-scaleUp {
+  transform: scale(0.5);
+}
+
+/* 커진 상태에서 작아지면서 페이드 인 */
+.sa-scaleDown {
+  transform: scale(1.5);
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
