@@ -17,24 +17,25 @@ const handler: HandlerType = async (req: NextApiRequest, res: NextApiResponse) =
 
 /** @description GET /user 사용자 목록 조회 */
 const getUserList = async (req: NextApiRequest): Promise<ApiResponseType> => {
-  //#region Parameter Check
-  const page = parseNumber(req.query.page);
-  const size = parseInRange(req.query.size, 1, 200);
+  return { data: [{user:'temp'}]}
+  // //#region Parameter Check
+  // const page = parseNumber(req.query.page);
+  // const size = parseInRange(req.query.size, 1, 200);
 
-  if (page === null) return { error: "page is required, number." };
-  if (size === null) return { error: "size is 1-200." };
-  //#endregion
+  // if (page === null) return { error: "page is required, number." };
+  // if (size === null) return { error: "size is 1-200." };
+  // //#endregion
 
-  //#region Query
-  const offset = (page - 1) * size;
-  const users = await executeQuery(
-    `
-      SELECT user_id, nickname FROM user WHERE deleted_at IS NULL LIMIT ? OFFSET ?;
-    `,
-    [page, offset]
-  );
-  return { data: users };
-  //#endregion
+  // //#region Query
+  // const offset = (page - 1) * size;
+  // const users = await executeQuery(
+  //   `
+  //     SELECT user_id, nickname FROM user WHERE deleted_at IS NULL LIMIT ? OFFSET ?;
+  //   `,
+  //   [page, offset]
+  // );
+  // return { data: users };
+  // //#endregion
 };
 
 /** @description POST /user 사용자 생성 */
