@@ -19,14 +19,14 @@ const handler: HandlerType = async (req: NextApiRequest, res: NextApiResponse) =
 const getUserList = async (req: NextApiRequest): Promise<ApiResponseType> => {
   //#region Parameter Check
   const page = parseNumber(req.query.page);
-  const limit = parseInRange(req.query.limit, 1, 200);
+  const size = parseInRange(req.query.size, 1, 200);
 
   if (page === null) return { error: "page is required, number." };
-  if (limit === null) return { error: "limit is 1-200." };
+  if (size === null) return { error: "size is 1-200." };
   //#endregion
 
   //#region Query
-  const offset = (page - 1) * limit;
+  const offset = (page - 1) * size;
   const users = await executeQuery(
     `
       SELECT user_id, nickname FROM user WHERE deleted_at IS NULL LIMIT ? OFFSET ?;

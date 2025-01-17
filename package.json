@@ -4,10 +4,12 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "backup":"git add . && git commit -m 'backup' && git push "
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
+    "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "mysql2": "^3.12.0",
     "next": "latest",
