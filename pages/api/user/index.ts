@@ -6,18 +6,31 @@ import bcrypt from "bcryptjs";
 import { executeQuery } from "@utils/executeQuery";
 
 // 요청에 따라 적절한 함수 호출
-const handler: HandlerType = async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   // 없을때 { error: "Method Not Allowed" };
-  if (req.method === "GET") return getUserList(req);
-  if (req.method === "POST") return createUser(req);
-  if (req.method === "PATCH") return updateUser(req);
-  if (req.method === "DELETE") return deleteUser(req);
-  return { error: "Method Not Allowed" };
+  if (req.method === "GET") {
+    const data = await getUserList(req);
+    return res.status(200).json(data);
+  }
+  if (req.method === "POST") {
+    const data = await createUser(req);
+    return res.status(200).json(data);
+  }
+  if (req.method === "PATCH") {
+    const data = await updateUser(req);
+    return res.status(200).json(data);
+  }
+  if (req.method === "DELETE") {
+    const data = await deleteUser(req);
+    return res.status(200).json(data);
+  }
+   const data = { error: "Method Not Allowed" };
+  return res.status(400).json(data);
 };
 
 /** @description GET /user 사용자 목록 조회 */
 const getUserList = async (req: NextApiRequest): Promise<ApiResponseType> => {
-  return { data: [{user:'temp'}]}
+  return { data: [{ user: "temp" }] };
   // //#region Parameter Check
   // const page = parseNumber(req.query.page);
   // const size = parseInRange(req.query.size, 1, 200);
@@ -109,4 +122,4 @@ const deleteUser = async (req: NextApiRequest): Promise<ApiResponseType> => {
   return { data: { user_id, message: "User deleted successfully" } };
 };
 
-export default (req: NextApiRequest, res: NextApiResponse) => tryCatchWrapper(req, res, handler);
+export default (req: NextApiRequest, res: NextApiResponse) => handler(req, res);
