@@ -1,7 +1,13 @@
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
 // API URL 목록
-const apiUrls = ["https://api-cdhub-a.up.railway.app/api", "https://api-cdhub-b.up.railway.app/api", "https://api-cdhub-c.up.railway.app/api", "https://api-cdhub-d.up.railway.app/api"];
+const apiUrls = [
+  "https://cdhub.org/api",
+  // "https://api-cdhub-a.up.railway.app/api",
+  // "https://api-cdhub-b.up.railway.app/api",
+  // "https://api-cdhub-c.up.railway.app/api",
+  // "https://api-cdhub-d.up.railway.app/api",
+];
 
 // 랜덤으로 BASE_URL을 선택하는 함수
 // axios.get(`${getBaseURL()}/api/user?page=1&size=10`).then((d) => console.log(d.data));
@@ -22,7 +28,7 @@ interface ApiResponse<T> {
 const getBaseURL = (): string => apiUrls[Math.floor(Math.random() * apiUrls.length)];
 
 // axios 요청 함수
-const fetch = async <T>(method: "GET" | "POST" | "PATCH" | "DELETE", url: '/user', params?: RequestParams): Promise<ApiResponse<T> | void> => {
+const fetch = async <T>(method: "GET" | "POST" | "PATCH" | "DELETE", url: "/user", params?: RequestParams): Promise<ApiResponse<T> | void> => {
   const baseUrl = getBaseURL();
   const fullUrl = `${baseUrl}${url}`;
 
