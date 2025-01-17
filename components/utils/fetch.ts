@@ -2,7 +2,7 @@ import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
 // API URL 목록
 const apiUrls = [
-  "https://cdhub.org/api",
+  "https://www.cdhub.org/api",
   // "https://api-cdhub-a.up.railway.app/api",
   // "https://api-cdhub-b.up.railway.app/api",
   // "https://api-cdhub-c.up.railway.app/api",
