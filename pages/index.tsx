@@ -3,7 +3,7 @@ import axios from "axios";
 import Link from "next/link";
 
 const IndexPage = () => {
-  const BASE_URL = `https://cdhubapi1.vercel.app/api`;
+  const BASE_URL = `https://cdhubapi2.vercel.app/api`;
   return (
     <div>
       <h1>Hello Next.js 3👋</h1>
