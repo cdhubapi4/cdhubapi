@@ -1,16 +1,22 @@
 {
   "private": true,
+  "version": "0.0.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "backup":"git add . && git commit -m 'backup' && git push "
+    "major": "npm version major",
+    "minor": "npm version minor",
+    "patch": "npm version patch",
+    "pub": "git add . && git commit --allow-empty -m \"version upgrade\" && yarn patch && git commit --allow-empty -m \"version upgrade of package.json\" && git push",
+    "backup": "git add . && git commit -m 'backup' && git push"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "mysql2": "^3.12.0",
     "next": "latest",
     "react": "^18.2.0",

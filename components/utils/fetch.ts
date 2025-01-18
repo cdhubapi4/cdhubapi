@@ -2,7 +2,8 @@ import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
 // API URL 목록
 const apiUrls = [
-  "https://www.cdhub.org/api",
+  "/api",
+  // "https://www.cdhub.org/api",
   // "https://api-cdhub-a.up.railway.app/api",
   // "https://api-cdhub-b.up.railway.app/api",
   // "https://api-cdhub-c.up.railway.app/api",
@@ -28,7 +29,7 @@ interface ApiResponse<T> {
 const getBaseURL = (): string => apiUrls[Math.floor(Math.random() * apiUrls.length)];
 
 // axios 요청 함수
-const fetch = async <T>(method: "GET" | "POST" | "PATCH" | "DELETE", url: "/user", params?: RequestParams): Promise<ApiResponse<T> | void> => {
+const fetch = async <T>(method: "GET" | "POST" | "PATCH" | "DELETE", url: string, params?: RequestParams): Promise<ApiResponse<T> | void> => {
   const baseUrl = getBaseURL();
   const fullUrl = `${baseUrl}${url}`;
 
