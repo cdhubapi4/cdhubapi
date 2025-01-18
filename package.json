@@ -9,6 +9,7 @@
     "major": "npm version major",
     "minor": "npm version minor",
     "patch": "npm version patch",
+    "push":"git push origin main && git push cdhubapi2 main",
     "pub": "git add . && git commit --allow-empty -m \"version upgrade\" && yarn patch && git commit --allow-empty -m \"version upgrade of package.json\" && git push",
     "backup": "git add . && git commit -m 'backup' && git push"
   },
