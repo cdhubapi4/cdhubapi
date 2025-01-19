@@ -12,7 +12,7 @@
     "push": "git push origin main && git push cdhubapi2 main",
     "pub": "git add . && git commit --allow-empty -m \"version upgrade\" && yarn patch && git commit --allow-empty -m \"version upgrade of package.json\" && git push",
     "api-init": "git remote add cd-hub-community git@github.com-minsekim1:minsekim1/cd-hub-community.git",
-    "api-fetch": "git fetch cd-hub-community && git checkout main && git merge --squash cd-hub-community/main && git add . && git commit --allow-empty -m 'backup' && git push",
+    "api-fetch": "git fetch cd-hub-community && git checkout main && git checkout --theirs . && git add . && git commit -m 'Merged changes from cd-hub-community (keeping their changes)' && git push",
     "backup": "git add . && git commit -m 'backup' && git push"
   },
   "dependencies": {
