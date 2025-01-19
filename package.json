@@ -17,7 +17,7 @@
     "api-update-2": "cd ../cdhub-api2 && yarn api-fetch",
     "api-update-3": "cd ../cdhub-api3 && yarn api-fetch",
     "api-update-4": "cd ../cdhub-api4 && yarn api-fetch",
-    "api-update": "yarn pub && yarn api-update-2",
+    "api-update": "yarn pub && yarn api-update-1 && yarn api-update-2 && yarn api-update-3 && yarn api-update-4",
     "backup": "git add . && git commit -m 'backup' && git push"
   },
   "dependencies": {
