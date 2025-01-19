@@ -13,6 +13,11 @@
     "pub": "git add . && git commit --allow-empty -m \"version upgrade\" && yarn patch && git commit --allow-empty -m \"version upgrade of package.json\" && git push",
     "api-init": "git remote add cd-hub-community git@github.com-minsekim1:minsekim1/cd-hub-community.git",
     "api-fetch": "git fetch cd-hub-community && git checkout main && git merge -X theirs cd-hub-community/main --no-edit && git add . && git commit --allow-empty -m \"version upgrade\" && git push",
+    "api-update-1": "cd ../cdhub-api1 && yarn api-fetch",
+    "api-update-2": "cd ../cdhub-api2 && yarn api-fetch",
+    "api-update-3": "cd ../cdhub-api3 && yarn api-fetch",
+    "api-update-4": "cd ../cdhub-api4 && yarn api-fetch",
+    "api-update": "yarn pub && yarn api-update-2",
     "backup": "git add . && git commit -m 'backup' && git push"
   },
   "dependencies": {
